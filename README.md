@@ -20,13 +20,13 @@
 
 ### 1.1 개발 목적
 
- 자체 개발한 ‘Deep Awake’는 운전자의 뇌파를 측정하여 졸음 판단 알고리즘을 통해, 운전 시 운전자의 졸음 여부를 판단하므로 해당 운전자의 졸음 상태를 높은 정확도로 감하여, 졸음 방지 기능들을 실행시켜줌으로써 동승자 없이도 졸음운전 사고 예방을 목적으로 개발하였다.
+자체 개발한 ‘Deep Awake’는 운전자의 뇌파를 측정하여 졸음 판단 알고리즘을 통해, 운전 시 운전자의 졸음 여부를 판단하므로 해당 운전자의 졸음 상태를 높은 정확도로 감하여, 졸음 방지 기능들을 실행시켜줌으로써 동승자 없이도 졸음운전 사고 예방을 목적으로 개발하였다.
 
 ### 1.2 개발 필요성
 
 1) 졸음운전에 의한 사고 발생 비율
 - 졸음은 수면에 대한 욕구로 인하여 각성 상태에서 수면으로 진행되는 과정에서 생기는 인식 장애 상태로 정의된다. 최근 3년간 고속도로 교통사고 사망자 10명 중 7명이 졸음이나 주시 태만으로 목숨을 잃은 것으로 나타난다. 한국교통안전공단과 한국도로공사가 29일 발표한 ‘최근 3년 고속도로 교통사고 현황 분석 결과’에 따르면, 2017~2019년 도로공사가 운영하는 재정고속도로에서 교통사고로 사망한 618명 중 428명(69.4%)이 ‘졸음·주시 태만’으로 사고를 당했다.  
-<표 1> 고속도로 교통사고 원인별 사망자 현황
+![image01](https://user-images.githubusercontent.com/57719617/150774223-efc50cfe-e052-4b9a-8fd7-da573675ebee.png)
 
 2) 딥러닝 기반 안구 인식기술의 한계점
 - 시중에 상용화되어있는 어플은 스마트폰 전면 카메라를 통해 얼굴의 눈 깜박임을 인식하여 졸음 상태를 알려준다.
@@ -56,16 +56,16 @@
 
 ### 2.1 설계 계획
 
-ㅇ 졸음 판단 알고리즘
+1) 졸음 판단 알고리즘
 - CNN 알고리즘을 기반으로 학습된 모델로 해당 EEG 신호를 판별하여 해당 신호가 응급 상황일 경우 AWS EC2의 서버로 전송하였다.
 
-ㅇ 사용자와 의사소통을 위한 음성인식 기술
+2) 사용자와 의사소통을 위한 음성인식 기술
 - STT란 음성 언어를 컴퓨터가 해석해 문자로 전환하는 기능이며 사용자가 음성을 이용해 졸음 퇴치 기능에 대한 제어를 적용 가능하도록 하였다.
 
-ㅇ 공공 데이터 이용
+3) 공공 데이터 이용
 - 실시간으로 openweathermap과 airkorea에서 날씨 정보와 대기질 정보를 파싱하여 사용자에게 정보를 제공하기 위하여 공공 데이터를 이용하였다.
 
-ㅇ 뇌파 데이터 전처리 기술
+4) 뇌파 데이터 전처리 기술
 - 정상상태와 졸음 상태의 뇌파 데이터를 추출하여 6:2:2의 비율로 train, validation, test 데이터 셋으로 나눠서 사용하였다.
 
 ### 2.2 실제 구현 내용
@@ -73,7 +73,9 @@
 #### 2.2.1 메뉴 및 기능
 
 ‘Deep Awake’ 어플은 운전자의 뇌파를 측정하여 졸음 판단 알고리즘을 통해, 운전자의 졸음 여부를 판단한다. 졸음으로 판단 시 졸음 퇴치 기능 2가지를 제공한다. [그림 1]과 [그림 2]는 프로젝트의 순서와 흐름을 설명하고, [표 1]은 기능에 대한 상세 설명을 나타낸다.  
+![image02](https://user-images.githubusercontent.com/57719617/150776396-a6d2ada4-7637-4709-b6e7-541eeb1198e3.png)  
 [그림 1] 운전자 중심 프로젝트 흐름도  
+![image03](https://user-images.githubusercontent.com/57719617/150776443-b97cd095-f156-46c9-8aba-8bf7a0e13bd9.png)  
 [그림 2] 프로젝트 전체 흐름도  
 [표 1] 전체 기능 목록  
 [표 2]  
@@ -104,15 +106,14 @@ Colab을 통해 실행하였으며 실시간으로 받아온 뇌파 데이터를
 [표]
 
 ## 3. 참고 문헌
-[링크]
 
-Stedman’s Medical Dictionary, 2008 Lippincott Williams & Wilkins.
+1) Stedman’s Medical Dictionary, 2008 Lippincott Williams & Wilkins.
 
-6-7 out of 10 highway traffic accident fatalities are drowsy driving or negligent driving (2020),https://www.yna.co.kr/view/AKR20200723118900530, Union News
+2) 6-7 out of 10 highway traffic accident fatalities are drowsy driving or negligent driving (2020),https://www.yna.co.kr/view/AKR20200723118900530, Union News
 
-Successfully developed an algorithm to catch drowsiness while driving (2019),
+3) Successfully developed an algorithm to catch drowsiness while driving (2019),
 https://www.monews.co.kr/news/articleView.html?idxno=206758, Medical Observer
 
-SeungGi Lee,YoungSu Kwon, Jisoo Park, Seoungjin Yun, and Won-Tae Kim, A Sleep-driving Accident Prevention System based on EEG analysis using Deep-learning Algorithm, Journal of The Institute of Electronics and Information Engineers Vol.55 , NO.3, March 2018
+4) SeungGi Lee,YoungSu Kwon, Jisoo Park, Seoungjin Yun, and Won-Tae Kim, A Sleep-driving Accident Prevention System based on EEG analysis using Deep-learning Algorithm, Journal of The Institute of Electronics and Information Engineers Vol.55 , NO.3, March 2018, https://www.koreascience.or.kr/article/CFKO202133649172010.pdf
 
-Ju-Won Seo, Wan-Tae Roh, Sang-Rak Lee, Rae-Hoon Jeong, Woongsup Kim, Drowsiness detection and prevention with Raspberry Pi, 2020 온라인 추계학술발표대회 논문집 제27권 제 2호 (2020.11)
+5) Ju-Won Seo, Wan-Tae Roh, Sang-Rak Lee, Rae-Hoon Jeong, Woongsup Kim, Drowsiness detection and prevention with Raspberry Pi, 2020 https://www.koreascience.or.kr/article/CFKO202133649172010.pdf
