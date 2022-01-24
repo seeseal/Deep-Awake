@@ -82,6 +82,11 @@
 [그림 2] 프로젝트 전체 흐름도  
 [표 2] 전체 기능 목록  
 [표 3]  
+![1](https://user-images.githubusercontent.com/57719617/150778753-75ced89e-5687-4f1f-8e81-48af62f78d9f.jpg)  
+![2](https://user-images.githubusercontent.com/57719617/150778758-a3b881b3-3cd0-485e-8d60-2bef6932c017.jpg)  
+![3](https://user-images.githubusercontent.com/57719617/150778761-64bce9fc-ff57-414f-be18-0a8f24c4a39f.jpg)  
+![4](https://user-images.githubusercontent.com/57719617/150778764-a169564a-6084-4a85-b3a7-3b0fdb90c28e.jpg)  
+![5](https://user-images.githubusercontent.com/57719617/150778766-cb963831-09e9-4dfa-b0bc-fa889f2e9ff5.jpg)  
 [시연 사진]  
 
 ![image04](https://user-images.githubusercontent.com/57719617/150776723-7a5ba0aa-3beb-4b67-afb5-b889a2626926.png)  
@@ -90,6 +95,7 @@
 
 #### 2.2.2 서비스 흐름도
 ![image05](https://user-images.githubusercontent.com/57719617/150776728-f94b63bd-e5cf-4bb4-af63-bad23188cc60.png)  
+[서비스 흐름도]  
 
 #### 2.2.3 CNN 모델링
 
@@ -99,7 +105,7 @@
 
  ‘Deep Awake’ 앱의 졸음 판단 알고리즘을 위해 사용자 뇌파에 따라 졸음 상태를 판단하는 기능이 요구되었다. CNN 알고리즘에 적용된 데이터의 수는 정상 데이터 460,800개 중 60%에 해당하는 276,480개는 training set으로 20%에 해당하는 92,160개는 각각 validation set과 test set으로 사용되었다. 마찬가지로 졸음 데이터 307,200개를 6:2:2로 나누어 training set으로 184,320개, validation set, test set으로 각각 61,440개를 사용하였고 정확도는 85%를 보였다. 정상상태일 때를 0, 졸음 상태일 때를 1로 설정하여 결괏값을 받아왔다. cpu가 아닌 gpu를 활용하고자 했고, 구글에서 제공하는 colab gpu를 활용하였다.  
  ![image06](https://user-images.githubusercontent.com/57719617/150777128-60f36c75-f727-4c95-aaaa-18a2d765fc94.jpg)  
- 평상 시 뇌파와 졸음 시 뇌파  
+ [평상 시 뇌파와 졸음 시 뇌파]  
  
 #### 2.2.4 졸음 예측 모델링 수행
 
