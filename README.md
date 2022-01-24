@@ -97,7 +97,7 @@
 ![2](https://user-images.githubusercontent.com/57719617/150778758-a3b881b3-3cd0-485e-8d60-2bef6932c017.jpg)  
 ![3](https://user-images.githubusercontent.com/57719617/150778761-64bce9fc-ff57-414f-be18-0a8f24c4a39f.jpg)  
 ![4](https://user-images.githubusercontent.com/57719617/150778764-a169564a-6084-4a85-b3a7-3b0fdb90c28e.jpg)  
-![5](https://user-images.githubusercontent.com/57719617/150778766-cb963831-09e9-4dfa-b0bc-fa889f2e9ff5.jpg)  
+![5](https://user-images.githubusercontent.com/57719617/150784156-1117c5f5-a64c-498d-aead-f71d37203f91.jpg)  
 [시연 사진]  
 
 ![image04](https://user-images.githubusercontent.com/57719617/150776723-7a5ba0aa-3beb-4b67-afb5-b889a2626926.png)  
